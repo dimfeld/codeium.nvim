@@ -81,6 +81,20 @@ in your default browser using the xdg-open command.
 - `enterprise_mode`: enable enterprise mode
 - `detect_proxy`: enable or disable proxy detection
 - `enable_chat`: enable chat functionality
+- `enable_cmp_source`: defaults to true. Set `false` to disable the `cmp` source
+- `virtual_text`: configuration for the virtual text feature
+  - `enabled`: defaults to false. Set `true` to enable the virtual text feature
+  - `manual`: Set `true` to only trigger Codeium using a manual Lua function call
+  - `idle_delay`: defaults to 75. Time in ms to wait before clearing virtual text
+  - `virtual_text_priority`: defaults to 65535. Priority of the virtual text
+  - `map_keys`: defaults to true. Set `false` to disable the default key bindings
+  - `key_bindings`: key bindings for accepting and cycling through completions
+    - `accept`: key binding for accepting a completion, default is `<Tab>`
+    - `accept_word`: key binding for accepting the next word, default is not set
+    - `accept_line`: key binding for accepting the next line, default is not set
+    - `clear`: key binding for clearing the virtual text, default is `<C-[>`
+    - `next`: key binding for cycling to the next completion, default is `<M-]>`
+    - `prev`: key binding for cycling to the previous completion, default is `<M-[>`
 - `tools`: paths to binaries used by the plugin:
 
   - `uname`: not needed on Windows, defaults given.

@@ -84,6 +84,7 @@ end
 
 function M.get_uri(path)
 	local info = io.get_system_info()
+	path = vim.uri_encode(path)
 	if info.is_windows then
 		path = path:gsub("\\", "/")
 		return "file:///" .. path

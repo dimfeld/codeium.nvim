@@ -1,6 +1,6 @@
 {
-  "version": "1.20.9",
-  "stamp": "2deb37376016b8eb5f2895a7b7a5f46aa57fb6d6",
+  "version": "1.24.2",
+  "stamp": "ef67eff8255a96df6ebf208d71d4ccc48ed4142d",
   "hashes": {
     "x86_64-linux": "sha256-3BZ1Nug8updRc/WLFLlyPf02cuCCkOYBCc1Osr3Lv/I=",
     "aarch64-linux": "sha256-IoR0qm95QgY0ZHRz5ulDu3U8xdyXwnYRRtFqoQrvtVo=",

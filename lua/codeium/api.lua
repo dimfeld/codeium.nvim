@@ -426,6 +426,11 @@ function Server:new()
 		-- bufnr for current buffer is 0
 		local bufnr = 0
 
+		local bufname = vim.api.nvim_buf_get_name(bufnr)
+		if bufname == "" then
+			return
+		end
+
 		local line_ending = util.get_newline(bufnr)
 		local lines = vim.api.nvim_buf_get_lines(bufnr, 0, -1, true)
 
@@ -442,7 +447,7 @@ function Server:new()
 			cursor_offset = 0,
 			text = text,
 			line_ending = line_ending,
-			absolute_uri = util.get_uri(vim.api.nvim_buf_get_name(bufnr)),
+			absolute_uri = util.get_uri(bufname),
 			workspace_uri = util.get_uri(util.get_project_root()),
 		}
 

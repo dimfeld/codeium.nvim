@@ -289,6 +289,12 @@ local function render_current_completion()
 		if part.type == "COMPLETION_PART_TYPE_INLINE_MASK" then
 			data.virt_text = { { text, hlgroup } }
 		elseif part.type == "COMPLETION_PART_TYPE_BLOCK" then
+			if not text then
+				-- Debugging something that happens occasionally
+				dd(current_completion)
+				goto continue
+			end
+
 			local lines = vim.split(text, "\n")
 			if lines[#lines] == "" then
 				table.remove(lines)
